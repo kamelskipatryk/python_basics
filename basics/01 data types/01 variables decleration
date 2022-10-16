@@ -1,0 +1,7 @@
+amount_of_hours = 100
+
+coding = 55
+learning = 25
+practice = 20
+
+print(amount_of_hours - coding)
