@@ -5,3 +5,4 @@ def eprint(*args, **kwargs):
 
 eprint("Test")
 eprint("foo", "bar", "baz", sep="---")
+
