@@ -20,8 +20,11 @@ print( text * 5)
 text_2 = text + ' and Hello again'
 print(text_2)
 
-# wycinek stringa od wybranego miejsca do końca
+# wycinek stringa od wybranego id do końca
 print( text_2[6:] )
+
+# wycinek stringa od początku do 5 id
+print( text_2[:6] )
 
 # wyprintowanie co któryś element - UWAGA - pierwszy element zawsze się wyświetla
 print(text_2[::2])

@@ -4,7 +4,7 @@
 a = 1
 id_a_1 = id(a)
 
-a += 1
+a = 2
 id_a_2 = id(a)
 
 print( id_a_1 )
