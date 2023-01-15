@@ -14,8 +14,10 @@ class Vehicle:
     @gears.setter # set
     def gears(self, new_gears):
         print('new_gears:', new_gears)
-        if(new_gears > 0): self.__gears = new_gears
+        self.__gears = new_gears
+        
+
 
 vehicle_1 = Vehicle()
-vehicle_1.gears = 8 # set
+vehicle_1.gears = -7 # set
 print(vehicle_1.gears) # get
