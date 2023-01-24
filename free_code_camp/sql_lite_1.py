@@ -27,7 +27,7 @@ for line in fh:
 sqlstr = 'SELECT email, count FROM Counts ORDER BY count DESC LIMIT 10'
 
 for row in cur.execute(sqlstr):
-    print(str(row[0], row[1]))
+    print(str(row[0]), str(row[1]))
 
 cur.close()
 

@@ -1,4 +1,5 @@
-dictCars = {0: {
+dictCars = {
+0: {
   'brand': 'Ford',
   'electric': False,
   'year': 1964,
@@ -39,7 +40,8 @@ dictCars = {0: {
   'electric': False,
   'year': 2033,
   'colors': 'red'
-}}
+}
+}
 
 # showing all data
 print("\nShowing all data:\n")
@@ -70,7 +72,10 @@ for cID, cInfo in dictCars.items():
         # cars above 2000'
         if key == 'year' and cInfo[key] > 2000:
             c2000 += 1
-            
+
 print("How many BMW's in data:", cBMW)
 print("electrics:", cElectric)
 print("Cars above 2000 year:", c2000)
+
+print('-----------------')
+print(dictCars[0]['colors'])
