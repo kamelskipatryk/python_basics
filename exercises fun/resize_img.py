@@ -3,30 +3,36 @@ import os
 from PIL import Image
 from pathlib import Path
 
-# change currect working directory
-cwd = os.getcwd()
-print(cwd)
-new_cwd_object = os.chdir(r'C:\Users\W00lfie\Desktop\zdj')
-new_cwd = os.getcwd()
-print(new_cwd)
+# assign directory where images are
+path_to_directory = r'C:\Users\W00lfie\Desktop\zdj'
 
-# assign directory
-directory = r'C:\Users\W00lfie\Desktop\zdj'
+
+# create a new folder for resize images
+dir_copy = 'resize_images'
+resize_image_directory_path = os.path.join(path_to_directory, dir_copy)
+os.mkdir(resize_image_directory_path)
+os.chdir(resize_image_directory_path)
 
 # files(images) in directory
-images = Path(directory).glob('*')
+images = Path(path_to_directory).glob('*')
 
 # iterate over files in that directory
-for image in images:
-    # get file name
-    file_name = os.path.basename(image)
-    
-    # change size of image and overwrite it
-    im = Image.open(image)
-    new_image = im.resize((1000,1500))
-    new_image.save(file_name)
 
-    print(file_name)
-    
+for image in images:
+    try:
+        # get file name
+        image_name = os.path.basename(image)
+        
+        # rotate, change size of image and overwrite it
+        im = Image.open(image)
+        new_rotate = im.rotate(90, expand=True)
+        new_image = new_rotate.resize((1000,1500))
+        new_image.save(image_name)
+
+        print(image_name)
+    except:
+        pass
+
+print('done')
 
 
