@@ -2,14 +2,20 @@
 import os
 from PIL import Image
 from pathlib import Path
+from tkinter import Tk
+from tkinter import filedialog
+
+root = Tk()
+root.withdraw()
 
 # assign directory where images are
-path_to_directory = r'C:\Users\W00lfie\Desktop\zdj'
+#path_to_directory = r'C:\Users\W00lfie\Desktop\zdj'
 
+path_to_directory = filedialog.askdirectory()
 
 # create a new folder for resize images
-dir_copy = 'resize_images'
-resize_image_directory_path = os.path.join(path_to_directory, dir_copy)
+name_dir_for_resize_image = 'resized_images'
+resize_image_directory_path = os.path.join(path_to_directory, name_dir_for_resize_image)
 os.mkdir(resize_image_directory_path)
 os.chdir(resize_image_directory_path)
 
